@@ -10,9 +10,20 @@
     <body dir="rtl">
         <!-- Header -->
         <div class="pt-7">
+            <!-- Mobile menu -->
+            <div class="mobile-menu bg-primary fixed w-[300px] h-full inset-y-0 p-6 z-[200]">
+                <ol class="flex flex-col gap-2 text-center ">
+                    <li class="transition-all py-4"><a href="#">بازگشت به خانه</a></li>
+                    <li class="transition-all py-4"><a href="#">چیکار می کنیم</a></li>
+                    <li class="transition-all py-4"><a href="#">خدمات</a></li>
+                    <li class="transition-all py-4"><a href="#">پروژه ها</a></li>
+                    <li class="transition-all py-4"><a href="#">بلاگ</a></li>
+                    <li class="transition-all py-4"><a href="#">تماس با ما</a></li>
+                </ol>
+            </div>
             <div class="container">
-                <!-- Top Header -->
-                <div class="flex justify-between mx-6 lg:mx-32">
+                <!-- Header-Nav -->
+                <div class="flex justify-between mx-5 lg:mx-28">
                     <a href="/">
                          <h1 class="text-[32px]">
                             <span class="font-bold text-[700]">A+</span>
@@ -20,20 +31,35 @@
                          </h1>
                     </a>
                     <div class="flex items-center justify-between">                        
-                        <ol class="flex gap-20 items-center max-lg:hidden">
-                            <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">خونه</a></li>
+                        <ol class="flex gap-6 xl:gap-16 items-center max-lg:hidden">
+                            <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">بازگشت به خانه</a></li>
                             <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">چیکار می کنیم</a></li>
                             <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">خدمات</a></li>
-                            <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">پروژه</a></li>
+                            <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">پروژه ها</a></li>
                             <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">بلاگ</a></li>
-                            <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">تماس</a></li>
+                            <li class="transition-all hover:border-b-2 hover:pb-1"><a href="#">تماس با ما</a></li>
                         </ol>
-                        <button class="lg:hidden">
+                        <button class="mobile-menu-btn lg:hidden cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" class="size-[24px]"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
                         </button>
                     </div>
                 </div>
+                <div class="pt-7 grid grid-cols-1 lg:grid-cols-12 relative">
+                    <div class="col-span-5 max-lg:order-last flex justify-center items-center max-lg:mt-7 z-1">
+                        <div class="max-lg:flex flex-col items-center">
+                            <h1 class="text-[26px] lg:text-[40px] font-bold">آژانس محصولات دیجیتال</h1>
+                            <p class="text-[16px] text-[#565656] mt-7 max-lg:px-2 text-center lg:text-right">آژانس دیجیتال پیشرو با تخصص طراحی و توسعه قوی. ما وبسایت‌های آماده، برنامه‌های کاربردی تلفن همراه، و خدمات تجاری آنلاین مفصل می‌سازیم.</p>
+                            <div class="text-[20px] text-white bg-[#2639ED] mt-7 px-10 py-5 rounded-full w-fit cursor-pointer">تماس بگیرید</div>
+                        </div>
+                    </div>
+                    <div class="col-span-7 max-lg:order-first lg:mr-5 z-1">
+                        <img src="./Images/image 8.jpg" class="lg:rounded-br-[200px] lg:mr-10" alt="">
+                    </div>
+                    <div class="absolute w-[8.5rem] h-[8.5rem] bg-primary rounded-full 2xl:right-[630px] xl:right-[525px] lg:right-[425px] top-[29px] max-md:hidden z-0"></div>
+                </div>
             </div>
         </div>
+
+        <script src="./JS/script.js"></script>
     </body>
 </html>

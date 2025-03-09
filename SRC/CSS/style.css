@@ -31,10 +31,6 @@
 body {
     font-family: vasir;
     font-weight: 400;
-    background-color: white;
-}
-
-*,::after,::before {
     box-sizing: border-box;
     background-color: #FEFEFE;
 }
@@ -42,5 +38,19 @@ body {
 .container {
     width: 100%;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease-out;
+}
+
+.mobile-menu.open-menu {
+    opacity: 1 !important;
+    transform: translateX(0);
+    visibility: visible !important;
 }
