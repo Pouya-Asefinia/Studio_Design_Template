@@ -49,8 +49,13 @@ body {
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease-out;
 }
 
-.mobile-menu.open-menu {
+.open-menu {
     opacity: 1 !important;
     transform: translateX(0);
+    visibility: visible !important;
+}
+
+.active-overlay {
+    opacity: 1 !important;
     visibility: visible !important;
 }
