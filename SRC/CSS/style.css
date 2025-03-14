@@ -59,3 +59,14 @@ body {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
+/* Video in Introdus part  */
+.deactive-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active-btn:hover .video-pause-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
