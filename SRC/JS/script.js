@@ -31,14 +31,16 @@ pauseVideo.addEventListener('click', () => {
     video.pause();
 })
 
-// Comments slider
-const commentSlider = document.querySelector('.comment-slider');
+// Comments & Images slider
+const sliders = document.querySelectorAll('.comment-slider, .image-slider');
 const btn = document.querySelectorAll('.btn');
-const slides = document.querySelectorAll('.text-slide');
+const slides = document.querySelectorAll('.text-slide, .pic-slide');
 
 function updateSlider(index) {
     const slideWidth = slides[0].clientWidth;
-    commentSlider.style.transform = `translateX(${index * slideWidth}px)`;
+    sliders.forEach(slider => {
+        slider.style.transform = `translateX(${index * slideWidth}px)`;
+    });
 }
 
 btn.forEach((button, index) => {

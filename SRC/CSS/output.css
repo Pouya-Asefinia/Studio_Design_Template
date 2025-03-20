@@ -6,13 +6,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-700: oklch(0.555 0.163 48.998);
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
     --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-sm: 8px;
     --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
@@ -349,8 +347,8 @@
       max-width: 96rem;
     }
   }
-  .m-7 {
-    margin: calc(var(--spacing) * 7);
+  .m-auto {
+    margin: auto;
   }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
@@ -366,6 +364,9 @@
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -388,8 +389,17 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
+  }
+  .aspect-auto {
+    aspect-ratio: auto;
+  }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
   }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
@@ -406,9 +416,17 @@
     width: calc(var(--spacing) * 44);
     height: calc(var(--spacing) * 44);
   }
+  .size-96 {
+    width: calc(var(--spacing) * 96);
+    height: calc(var(--spacing) * 96);
+  }
   .size-\[3\.38rem\] {
     width: 3.38rem;
     height: 3.38rem;
+  }
+  .size-\[3\] {
+    width: 3;
+    height: 3;
   }
   .size-\[4\.6rem\] {
     width: 4.6rem;
@@ -437,6 +455,14 @@
   .size-\[42px\] {
     width: 42px;
     height: 42px;
+  }
+  .size-\[96\] {
+    width: 96;
+    height: 96;
+  }
+  .size-\[389px\] {
+    width: 389px;
+    height: 389px;
   }
   .size-fit {
     width: fit-content;
@@ -472,18 +498,6 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
-  .animate-\[scal\] {
-    animation: scal;
-  }
-  .animate-\[scale-110\] {
-    animation: scale-110;
-  }
-  .animate-\[scale-\] {
-    animation: scale-;
-  }
-  .animate-\[wiggle_1s_ease-in-out_infinite\] {
-    animation: wiggle 1s ease-in-out infinite;
-  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -513,6 +527,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -582,9 +599,6 @@
   .bg-\[\#FFF7E3\] {
     background-color: #FFF7E3;
   }
-  .bg-amber-700 {
-    background-color: var(--color-amber-700);
-  }
   .bg-brown-shape {
     background-color: var(--color-brown-shape);
   }
@@ -597,8 +611,8 @@
   .object-cover {
     object-fit: cover;
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
+  .object-fill {
+    object-fit: fill;
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
@@ -703,10 +717,6 @@
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
   }
   .hover\:scale-105 {
     &:hover {
@@ -813,6 +823,16 @@
       text-align: center;
     }
   }
+  .max-md\:gap-2 {
+    @media (width < 48rem) {
+      gap: calc(var(--spacing) * 2);
+    }
+  }
+  .max-md\:gap-4 {
+    @media (width < 48rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
   .max-md\:py-10 {
     @media (width < 48rem) {
       padding-block: calc(var(--spacing) * 10);
@@ -868,6 +888,21 @@
       margin-inline: calc(var(--spacing) * 28);
     }
   }
+  .lg\:mt-1 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 1);
+    }
+  }
+  .lg\:mt-16 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:mt-20 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
   .lg\:mr-5 {
     @media (width >= 64rem) {
       margin-right: calc(var(--spacing) * 5);
@@ -901,6 +936,11 @@
   .lg\:grid-cols-12 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+  .lg\:gap-2 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 2);
     }
   }
   .lg\:rounded-tr-\[150px\] {
@@ -1076,10 +1116,6 @@
   inherits: false;
 }
 @property --tw-backdrop-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
