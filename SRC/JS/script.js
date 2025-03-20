@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // mobile navbar
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -30,3 +30,30 @@ pauseVideo.addEventListener('click', () => {
     videoPart.classList.remove('active-btn');
     video.pause();
 })
+
+// Comments slider
+const commentSlider = document.querySelector('.comment-slider');
+const btn = document.querySelectorAll('.btn');
+const slides = document.querySelectorAll('.text-slide');
+
+function updateSlider(index) {
+    const slideWidth = slides[0].clientWidth;
+    commentSlider.style.transform = `translateX(${index * slideWidth}px)`;
+}
+
+btn.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        updateSlider(index);
+
+        for(let i=0; i<5; i++){
+            btn[i].classList.remove('active');
+        }
+        button.classList.add('active');
+    });
+});
+
+// Update slider on window resize
+window.addEventListener('resize', () => {
+    const activeIndex = Array.from(btn).findIndex(button => button.classList.contains('active'));
+    updateSlider(activeIndex);
+});

@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/output.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <title>Studio Design</title>
     </head>
     <body dir="rtl">
@@ -164,16 +166,49 @@
         <!-- Comments -->
         <div class="py-20">
             <div class="container">
-                <div class="mx-auto text-center max-lg:px-2">
+                <div class="mx-auto text-center max-lg:px-2 pb-10">
                     <h2 class="text-[26px] md:text-[30px] lg:text-[40px] font-bold">آنچه مشتریان خوشحال ما می گویند</h2>
                     <p class="text-[16px] text-[#565656] mt-7">چندین مشتری منتخب که قبلاً به خدمات ما اعتقاد دارند.</p>
                 </div>
-                <div class="grid grid-cols-12 pt-20">
-                    <div class="col-span-12 lg:col-span-8 grid grid-cols-1 lg:grid-cols-2">
-                        <div></div>
-                        <div></div>
+                <div class="grid grid-cols-12 mt-20">
+                    <div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2">
+                        <div class="bg-amber-700">.</div>
+                        <div class="my-auto p-7">
+                            <!-- Comments Slider -->
+                            <div class="overflow-hidden">
+                                <div class="comment-slider">
+                                    <div class="text-slide">
+                                        <h2 class="text-[24px] font-bold">پویا</h2>
+                                        <p class="text-[16px] text-[#565656] mt-7">عالی، کار بسیار خوبی! با تشکر از شما برای طراحی و کار شگفت انگیز. واقعا تحت تاثیر کیفیت بالا و زمان چرخش سریع قرار گرفتم. به شدت توصیه می شود.</p>
+                                    </div>
+                                    <div class="text-slide">
+                                        <h2 class="text-[24px] font-bold">مرتضی</h2>
+                                        <p class="text-[16px] text-[#565656] mt-7">عالی، کار بسیار خوبی! با تشکر از شما برای طراحی و کار شگفت انگیز. واقعا تحت تاثیر کیفیت بالا و زمان چرخش سریع قرار گرفتم. به شدت توصیه می شود.</p>
+                                    </div>
+                                    <div class="text-slide">
+                                        <h2 class="text-[24px] font-bold">سحر</h2>
+                                        <p class="text-[16px] text-[#565656] mt-7">عالی، کار بسیار خوبی! با تشکر از شما برای طراحی و کار شگفت انگیز. واقعا تحت تاثیر کیفیت بالا و زمان چرخش سریع قرار گرفتم. به شدت توصیه می شود.</p>
+                                    </div>
+                                    <div class="text-slide">
+                                        <h2 class="text-[24px] font-bold">محمد</h2>
+                                        <p class="text-[16px] text-[#565656] mt-7">عالی، کار بسیار خوبی! با تشکر از شما برای طراحی و کار شگفت انگیز. واقعا تحت تاثیر کیفیت بالا و زمان چرخش سریع قرار گرفتم. به شدت توصیه می شود.</p>
+                                    </div>
+                                    <div class="text-slide">
+                                        <h2 class="text-[24px] font-bold">علی</h2>
+                                        <p class="text-[16px] text-[#565656] mt-7">عالی، کار بسیار خوبی! با تشکر از شما برای طراحی و کار شگفت انگیز. واقعا تحت تاثیر کیفیت بالا و زمان چرخش سریع قرار گرفتم. به شدت توصیه می شود.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-btn mt-8 text-center lg:text-right">
+                                <div class="btn active"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-12 lg:col-span-4">
+                    <div class="col-span-12 lg:col-span-4 max-lg:order-first">
                         <div class="h-[22.19rem] max-w-[21.75rem] relative mx-auto">
                             <img src="./images/2147830510.jpg" class="absolute size-[7.5rem] object-cover rounded-full top-[30%] right-[28%]" alt="">
                             <img src="./images/255.jpg" class="absolute size-[4.25rem] object-cover rounded-full top-0 right-[39%]" alt="">
@@ -189,6 +224,7 @@
             </div>
         </div>
 
+        <!-- Script links -->
         <script src="./js/script.js"></script>
     </body>
 </html>
