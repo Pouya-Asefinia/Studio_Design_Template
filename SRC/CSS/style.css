@@ -126,6 +126,10 @@ body {
     object-fit: cover;
 }
 
-.subscribe-shape {
-    border-radius: 60% 30% 30% 0% / 0% 35% 65% 100%;
+
+@media screen and (min-width: 1024px) {
+    
+    .subscribe-shape {
+        border-radius: 60% 30% 30% 0% / 0% 35% 65% 100%;
+    }
 }
