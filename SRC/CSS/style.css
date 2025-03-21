@@ -125,3 +125,7 @@ body {
     height: auto;
     object-fit: cover;
 }
+
+.subscribe-shape {
+    border-radius: 60% 30% 30% 0% / 0% 35% 65% 100%;
+}
