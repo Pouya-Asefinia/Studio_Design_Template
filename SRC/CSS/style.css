@@ -80,7 +80,8 @@ body {
 }
 
 .text-slide {
-    min-width: 100%;
+    flex: 0 0 100%; /* Each slide takes up 100% of the container width */
+    max-width: 100%;
     padding: 1rem;
     height: fit-content;
     box-sizing: border-box;
@@ -100,6 +101,7 @@ body {
 }
 
 /* Image slider */
+
 .image-slider {
     position: relative;
     width: 100%;
@@ -126,6 +128,7 @@ body {
     object-fit: cover;
 }
 
+/* Subscribe News */
 
 @media screen and (min-width: 1024px) {
     
