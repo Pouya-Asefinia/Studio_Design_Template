@@ -96,8 +96,9 @@ body {
     background: #E7F0FC;
     cursor: pointer;
 }
-.active {
-    background: #2639ED;
+.btn.active {
+    background-color: #007bff;
+    color: white;
 }
 
 /* Image slider */
@@ -112,7 +113,7 @@ body {
 
 .pic-slide {
     flex: 0 0 100%;
-    max-width: 100%;
+    min-width: 100%;
     height: auto;
     border-radius: 0px 500px 500px 500px;
     overflow: hidden;
