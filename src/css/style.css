@@ -1,0 +1,145 @@
+@font-face {
+    font-family: vasir;
+    src: url(../fonts/Vazir-Thin.woff);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: vasir;
+    src: url(../fonts/Vazir-Light.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: vasir;
+    src: url(../fonts/Vazir-Medium.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: vasir;
+    src: url(../fonts/Vazir.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: vasir;
+    src: url(../fonts/Vazir-Bold.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: vasir;
+    font-weight: 400;
+    box-sizing: border-box;
+    background-color: #FEFEFE;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease-out;
+}
+
+.open-menu {
+    opacity: 1 !important;
+    transform: translateX(0);
+    visibility: visible !important;
+}
+
+.active-overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Video in Introdus part  */
+.deactive-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active-btn:hover .video-pause-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Comment slider */
+.comment-slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: all 0.5s ease-out;
+}
+
+.text-slide {
+    flex: 0 0 100%; /* Each slide takes up 100% of the container width */
+    max-width: 100%;
+    padding: 1rem;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: #E7F0FC;
+    cursor: pointer;
+}
+.btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Image slider */
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: all 0.5s ease-out;
+}
+
+.pic-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: auto;
+    border-radius: 0px 500px 500px 500px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Subscribe News */
+@media screen and (max-width: 1024px) {
+    
+    .subscribe-shape {
+        border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .subscribe-shape {
+        border-radius: 60% 30% 30% 0% / 0% 35% 65% 100%;
+    }
+}
